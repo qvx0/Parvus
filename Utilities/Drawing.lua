@@ -53,7 +53,7 @@ local DrawingLibrary = {
     })
 }
 
-local function AddDrawing(Type, Properties)
+local function Drawing.new(Type, Properties)
     local DrawingObject = Drawing.new(Type)
 
     if Properties then
@@ -1177,7 +1177,7 @@ function DrawingLibrary.AddObject(Self, Object, ObjectName, ObjectPosition, Glob
         Flag = Flag, GlobalFlag = GlobalFlag, Flags = Flags,
         IsBasePart = typeof(ObjectPosition) ~= "Vector3",
 
-        Name = AddDrawing("Text", { Visible = false, ZIndex = 0, Center = true, Outline = true, Color = WhiteColor, Font = "Plex" })
+        Name = Drawing.new("Text", { Visible = false, ZIndex = 0, Center = true, Outline = true, Color = WhiteColor, Font = "Plex" })
     }
 
     if Self.ObjectESP[Object].IsBasePart then
@@ -1197,61 +1197,61 @@ function DrawingLibrary.AddESP(Self, Target, Mode, Flag, Flags)
                 Visible = false,
                 OutlineVisible = false,
                 LineLT = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineTL = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineLB = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineBL = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineRT = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineTR = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineRB = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 },
                 LineBR = {
-                    Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                    Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 })
+                    Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                    Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 })
                 }
             },
             HealthBar = {
-                Main = AddDrawing("Square", { Visible = false, ZIndex = 1, Filled = true }),
-                Outline = AddDrawing("Square", { Visible = false, ZIndex = 0, Filled = true })
+                Main = Drawing.new("Square", { Visible = false, ZIndex = 1, Filled = true }),
+                Outline = Drawing.new("Square", { Visible = false, ZIndex = 0, Filled = true })
             },
             Tracer = {
-                Main = AddDrawing("Line", { Visible = false, ZIndex = 1 }),
-                Outline = AddDrawing("Line", { Visible = false, ZIndex = 0 }),
+                Main = Drawing.new("Line", { Visible = false, ZIndex = 1 }),
+                Outline = Drawing.new("Line", { Visible = false, ZIndex = 0 }),
             },
             HeadDot = {
-                Main = AddDrawing("Circle", { Visible = false, ZIndex = 1 }),
-                Outline = AddDrawing("Circle", { Visible = false, ZIndex = 0 }),
+                Main = Drawing.new("Circle", { Visible = false, ZIndex = 1 }),
+                Outline = Drawing.new("Circle", { Visible = false, ZIndex = 0 }),
             },
             Arrow = {
-                Main = AddDrawing("Triangle", { Visible = false, ZIndex = 1 }),
-                Outline = AddDrawing("Triangle", { Visible = false, ZIndex = 0 }),
+                Main = Drawing.new("Triangle", { Visible = false, ZIndex = 1 }),
+                Outline = Drawing.new("Triangle", { Visible = false, ZIndex = 0 }),
             },
             Textboxes = {
-                Name = AddDrawing("Text", { Visible = false, ZIndex = 0, Center = true, Outline = true, Color = WhiteColor, Font = "Plex" }),
-                Distance = AddDrawing("Text", { Visible = false, ZIndex = 0, Center = true, Outline = true, Color = WhiteColor, Font = "Plex" }),
-                Health = AddDrawing("Text", { Visible = false, ZIndex = 0, Center = false, Outline = true, Color = WhiteColor, Font = "Plex" }),
-                Weapon = AddDrawing("Text", { Visible = false, ZIndex = 0, Center = false, Outline = true, Color = WhiteColor, Font = "Plex" })
+                Name = Drawing.new("Text", { Visible = false, ZIndex = 0, Center = true, Outline = true, Color = WhiteColor, Font = "Plex" }),
+                Distance = Drawing.new("Text", { Visible = false, ZIndex = 0, Center = true, Outline = true, Color = WhiteColor, Font = "Plex" }),
+                Health = Drawing.new("Text", { Visible = false, ZIndex = 0, Center = false, Outline = true, Color = WhiteColor, Font = "Plex" }),
+                Weapon = Drawing.new("Text", { Visible = false, ZIndex = 0, Center = false, Outline = true, Color = WhiteColor, Font = "Plex" })
             },
-            --Test = AddDrawing("Square", { Visible = true, ZIndex = -1, Filled = true })
+            --Test = Drawing.new("Square", { Visible = true, ZIndex = -1, Filled = true })
         }
     }
 
@@ -1280,7 +1280,7 @@ function DrawingLibrary.RemoveObject(Self, Target)
 end
 
 function DrawingLibrary.SetupCursor(Window)
-    local Cursor = AddDrawing("Image", {
+    local Cursor = Drawing.new("Image", {
         Size = V2New(64, 64) / 1.5,
         Data = Parvus.Cursor,
         --Rounding = 0,
@@ -1297,10 +1297,10 @@ function DrawingLibrary.SetupCursor(Window)
 end
 
 function DrawingLibrary.SetupCrosshair(Flags)
-    local CrosshairL = AddDrawing("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
-    local CrosshairR = AddDrawing("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
-    local CrosshairT = AddDrawing("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
-    local CrosshairB = AddDrawing("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
+    local CrosshairL = Drawing.new("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
+    local CrosshairR = Drawing.new("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
+    local CrosshairT = Drawing.new("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
+    local CrosshairB = Drawing.new("Line", { Thickness = 1.5, Transparency = 1, Visible = false, ZIndex = 2 })
 
     RunService.Heartbeat:Connect(function()
         local CrosshairEnabled = Flags["Crosshair/Enabled"] and UserInputService.MouseBehavior ~= Enum.MouseBehavior.Default and not UserInputService.MouseIconEnabled
@@ -1338,8 +1338,8 @@ function DrawingLibrary.SetupCrosshair(Flags)
 end
 
 function DrawingLibrary.SetupFOV(Flag, Flags)
-    local FOV = AddDrawing("Circle", { ZIndex = 4 })
-    local FOVOutline = AddDrawing("Circle", { ZIndex = 3 })
+    local FOV = Drawing.new("Circle", { ZIndex = 4 })
+    local FOVOutline = Drawing.new("Circle", { ZIndex = 3 })
 
     RunService.Heartbeat:Connect(function()
         local Visible = GetFlag(Flags, Flag, "/Enabled")
